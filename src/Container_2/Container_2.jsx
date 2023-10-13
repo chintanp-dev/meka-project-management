@@ -3,11 +3,11 @@ import Header_2 from "./Header/Header_2";
 import FlexBox_1 from "./FlexBoxes/FlexBox_1";
 import FlexBox_2 from "./FlexBoxes/FlexBox_2";
 import FlexBox_3 from "./FlexBoxes/FlexBox_3";
-import Dots from "../assets/3_dots.png"
+import Dots from "../assets/3_dots.png";
 
 import "../Container_2.css";
 
-const infoCard = [
+const infoCard_1 = [
   {
     id: "a1",
     category: "🟢 DESIGN SYSTEM",
@@ -17,7 +17,7 @@ const infoCard = [
     dot: Dots,
     vh: "VH",
     ag: "AG",
-    lk: "LK"
+    lk: "LK",
   },
   {
     id: "a2",
@@ -28,6 +28,9 @@ const infoCard = [
     dot: Dots,
     ml: "ML",
   },
+];
+
+const infoCard_2 = [
   {
     id: "b1",
     category: "🔴 DEVELOPMENT",
@@ -38,6 +41,9 @@ const infoCard = [
     vh: "VH",
     lk: "LK",
   },
+];
+
+const infoCard_3 = [
   {
     id: "c1",
     category: "🔴 DEVELOPMENT",
@@ -67,7 +73,7 @@ const infoCard = [
     vh: "VH",
     ag: "AG",
   },
-]
+];
 
 const Container_2 = () => {
   return (
@@ -79,11 +85,11 @@ const Container_2 = () => {
       </header>
 
       <div className="main">
-        <FlexBox_1 />
+        <FlexBox_1 infoCard_1={infoCard_1} />
 
-        <FlexBox_2 />
+        <FlexBox_2 infoCard_2={infoCard_2}/>
 
-        <FlexBox_3 />
+        <FlexBox_3 infoCard_3={infoCard_3}/>
       </div>
     </div>
   );

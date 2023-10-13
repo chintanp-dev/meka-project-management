@@ -1,39 +1,9 @@
 import Dots from "../../assets/3_dots.png";
 import Plus from "../../assets/plus.png";
 
-const infoCard = [
-  {
-    id: "c1",
-    category: "🔴 DEVELOPMENT",
-    title: "Fix bugs in the CSS code",
-    description:
-      "Fix small bugs that are essentialto prepare for the next release that will happenthis quarter.",
-    dot: Dots,
-    hu: "HU",
-    nl: "NL",
-  },
-  {
-    id: "c2",
-    category: "🔵 TYPOGRAPHY",
-    title: "Proofread final text",
-    description:
-      "The text provided by marketing department needs to be proofread so that we make surethat it fits into our design.",
-    dot: Dots,
-    ag: "AG",
-  },
-  {
-    id: "c3",
-    category: "🟢 DESIGN SYSTEM",
-    title: "Responsive Design",
-    description:
-      "All design needs to be Responsive. the Requirement is that it fits all web and mobile screens.",
-    dot: Dots,
-    vh: "VH",
-    ag: "AG",
-  },
-];
 
-export default function FlexBox_3() {
+
+export default function FlexBox_3({infoCard_3}) {
   return (
     <div className="flexboxes">
       <header className="header3">
@@ -44,7 +14,7 @@ export default function FlexBox_3() {
         </div>
       </header>
 
-      {infoCard.map(
+      {infoCard_3.map(
         ({ id, category, title, description, dot, hu, nl, ag, vh }) => {
           return (
             <>
