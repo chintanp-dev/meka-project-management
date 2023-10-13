@@ -1,0 +1,179 @@
+.container2 {
+  /* background-color: rgb(247, 247, 247); */
+  background-color: rgba(255, 255, 255, 1);
+  width: 85%;
+  height: 119%;
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 5px 1rem;
+}
+
+.header11 {
+  display: flex;
+}
+
+#Search {
+  width: 200px;
+  border: none;
+  outline: none;
+  /* background-color: rgb(247, 247, 247); */
+  color: gray;
+}
+
+/* #Search :active {
+  border: none;
+} */
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px 22px 1rem;
+  align-items: flex-end;
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+  margin: 0px 10px;
+}
+
+.flexboxes {
+  background: rgba(238, 242, 245, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 10px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.header3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  margin: 5px 10px;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.mainboximg {
+  display: flex;
+}
+
+.align_center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fontimage {
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 35px;
+  height: 35px;
+}
+
+.fontimage.vh {
+  background-color: blue;
+}
+
+.fontimage.ag {
+  margin: 0px -5px;
+  background-color: peru;
+}
+
+.fontimage.ag1 {
+  background-color: peru;
+}
+
+.fontimage.ml {
+  background-color: rgb(236, 89, 114);
+}
+
+.fontimage.lk {
+  margin: 0px -5px;
+  background-color: green;
+}
+
+.fontimage.lk1 {
+  background-color: green;
+}
+
+.fontimage.hu {
+  background-color: rgb(236, 89, 114);
+}
+
+.fontimage.nl {
+  margin: 0px -5px;
+  background-color: peru;
+}
+
+/* media Queries */
+
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 180vh;
+  }
+
+  .flexboxes {
+    width: 45%;
+    height: fit-content;
+  }
+
+  .flexboxes:first-child {
+    /* height: 1400px; */
+    height: 100%;
+  }
+
+  .flexboxes:not(:first-child) {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 620px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .flexboxes:first-child {
+    height: fit-content;
+  }
+
+  .menuicon {
+    display: block;
+  }
+
+  .flexboxes {
+    width: 70%;
+  }
+
+  #Search {
+    background-color: white;
+  }
+
+  .maincontainer {
+    height: 0;
+    justify-content: center;
+  }
+
+  .container1 {
+    display: none;
+  }
+}
