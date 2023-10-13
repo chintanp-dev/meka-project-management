@@ -1,0 +1,34 @@
+.container1 {
+  flex-direction: column;
+  width: 15%;
+  height: 109%;
+  background-color: rgb(247, 247, 247);
+  /* background-color: (255, 255, 255, 1); */
+}
+
+.menuicon {
+  display: none;
+}
+
+.item1 {
+  display: flex;
+  margin: 0px 0px 0px 20px;
+  padding: 8px;
+  width: 180px;
+  height: 30px;
+  align-items: center;
+  gap: 10px;
+}
+
+.item11 {
+  font-size: large;
+  padding: 20px 0px 20px 9px;
+}
+.item13 {
+  background-color: rgb(188, 248, 248);
+  width: 166px;
+}
+.item16 {
+  position: absolute;
+  top: 650px;
+}

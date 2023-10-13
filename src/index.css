@@ -1,0 +1,61 @@
+.maincontainer {
+  display: flex;
+  gap: 0.8rem;
+  height: 99.7vh;
+}
+
+body {
+  margin: 0px;
+}
+
+.fas {
+  font-size: 20px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.fab {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.board {
+  font-size: 2rem;
+}
+
+.icon21 {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  margin: 0px 25px;
+  justify-content: space-around;
+}
+
+/* img {
+  width: 16px;
+  height: 16px;
+  border-radius: 40px;
+} */
+
+.gray {
+  color: gray;
+  font-size: 0.5rem;
+}
+
+.smallfont {
+  font-size: small;
+}
+
+.header31 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 8px 0px;
+}
