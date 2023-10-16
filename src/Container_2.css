@@ -86,39 +86,8 @@
   height: 35px;
 }
 
-.fontimage.vh {
-  background-color: blue;
-}
-
-.fontimage.ag {
+.fontimage:not(:first-child) {
   margin: 0px -5px;
-  background-color: peru;
-}
-
-.fontimage.ag1 {
-  background-color: peru;
-}
-
-.fontimage.ml {
-  background-color: rgb(236, 89, 114);
-}
-
-.fontimage.lk {
-  margin: 0px -5px;
-  background-color: green;
-}
-
-.fontimage.lk1 {
-  background-color: green;
-}
-
-.fontimage.hu {
-  background-color: rgb(236, 89, 114);
-}
-
-.fontimage.nl {
-  margin: 0px -5px;
-  background-color: peru;
 }
 
 /* media Queries */
