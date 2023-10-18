@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import BubbleImg from "./BubbleImg";
+import Card from "./Card";
 
-function Card({ props }) {
-  const [card, updateCard] = useState(props.infoCard);
+function CardHolder({ parentInfoCard }) {
+  const [cardHolder, updateCardHolder] = useState(parentInfoCard);
 
   function handleOnDragEnd(result) {
-    const items = Array.from(card);
+    const items = Array.from(cardHolder);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
-    updateCard(items);
+    updateCardHolder(items);
     console.log(result);
   }
   return (
@@ -17,31 +17,25 @@ function Card({ props }) {
       <Droppable droppableId="card">
         {(provided) => (
           <div {...provided.droppableProps} ref={provided.innerRef}>
-            {card.map((item, index) => {
+            {cardHolder.map((props, index) => {
               return (
-                <div className="card" key={item.id}>
-                  <Draggable draggableId={item.id} index={index}>
+                <div className="flexboxes" key={props.id}>
+                  <Draggable draggableId={props.id} index={index}>
                     {(provided) => (
                       <div
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
                       >
-                        <div className="header31">
-                          <div className="gray">{item.category}</div>
+                        <header className="header3">
+                          <div>{props.title}</div>
                           <div className="align_center">
-                            <img src={item.dot}></img>
+                            <img src={props.plus}></img>
+                            <img src={props.dot}></img>
                           </div>
-                        </div>
+                        </header>
 
-                        <div>{item.title}</div>
-                        <br />
-                        <div className="smallfont">{item.description}</div>
-                        <div>
-                          <br />
-
-                          <BubbleImg item={item} />
-                        </div>
+                        <Card props={props} />
                       </div>
                     )}
                   </Draggable>
@@ -56,4 +50,4 @@ function Card({ props }) {
   );
 }
 
-export default Card;
+export default CardHolder;

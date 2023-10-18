@@ -1,6 +1,6 @@
 import Header_1 from "./Header/Header_1";
 import Header_2 from "./Header/Header_2";
-import FlexBox from "./FlexBoxes/FlexBox";
+import CardHolder from "./FlexBoxes/CardHolder";
 import Plus from "../assets/plus.png";
 import Dots from "../assets/3_dots.png";
 
@@ -99,7 +99,7 @@ const Container_2 = () => {
       </header>
 
       <div className="main">
-        <FlexBox parentInfoCard={parentInfoCard} />
+        <CardHolder parentInfoCard={parentInfoCard} />
       </div>
     </div>
   );
