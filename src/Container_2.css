@@ -24,10 +24,6 @@
   color: gray;
 }
 
-/* #Search :active {
-  border: none;
-} */
-
 .header2 {
   display: flex;
   justify-content: space-between;
@@ -104,10 +100,9 @@
     height: fit-content;
   }
 
-  .flexboxes:first-child {
-    /* height: 1400px; */
+  /* .flexboxes:first-child {
     height: 100%;
-  }
+  } */
 
   .flexboxes:not(:first-child) {
     flex-wrap: wrap;

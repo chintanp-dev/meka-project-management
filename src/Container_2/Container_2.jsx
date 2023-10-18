@@ -20,7 +20,7 @@ const parentInfoCard = [
         description:
           "Create a Design system for a Hero Section in 2 Different variants. Create a symple presentation with these components.",
         dot: Dots,
-        bubble: ["VH", "AG"]
+        bubble: ["VH", "AG"],
       },
       {
         id: "a2",
@@ -29,7 +29,7 @@ const parentInfoCard = [
         description:
           "Modify Typography and styling of textplaced on 6 screens of the website Design. prepare the Documentation.",
         dot: Dots,
-        bubble: ["ML"]
+        bubble: ["ML"],
       },
     ],
   },
@@ -47,7 +47,7 @@ const parentInfoCard = [
         description:
           "OurDesigners created 6 screens for a website that needs tobe implemented by our dev team.",
         dot: Dots,
-        bubble: ["VH", "LK"]
+        bubble: ["VH", "LK"],
       },
     ],
   },
@@ -65,7 +65,7 @@ const parentInfoCard = [
         description:
           "Fix small bugs that are essentialto prepare for the next release that will happenthis quarter.",
         dot: Dots,
-        bubble: ["HU", "NL"]
+        bubble: ["HU", "NL"],
       },
       {
         id: "c2",
@@ -74,7 +74,7 @@ const parentInfoCard = [
         description:
           "The text provided by marketing department needs to be proofread so that we make surethat it fits into our design.",
         dot: Dots,
-        bubble: ["AG"]
+        bubble: ["AG"],
       },
       {
         id: "c3",
@@ -83,7 +83,7 @@ const parentInfoCard = [
         description:
           "All design needs to be Responsive. the Requirement is that it fits all web and mobile screens.",
         dot: Dots,
-        bubble: ["VH", "AG"]
+        bubble: ["VH", "AG"],
       },
     ],
   },
@@ -98,9 +98,7 @@ const Container_2 = () => {
         <Header_2 />
       </header>
 
-      <div className="main">
-        <CardHolder parentInfoCard={parentInfoCard} />
-      </div>
+      <CardHolder parentInfoCard={parentInfoCard} />
     </div>
   );
 };
