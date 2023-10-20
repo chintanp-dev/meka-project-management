@@ -1,23 +1,26 @@
 import { React } from "react";
+
 import BubbleImg from "./BubbleImg";
 
-function Card() {
+function Card({cardData}) {
+    console.log(cardData.category);
+    console.log(cardData.id);
   return (
     <div className="card">
       <div className="header31">
-        <div className="gray">{item.category}</div>
+        <div className="gray">{cardData.category}</div>
         <div className="align_center">
-          <img src={item.dot}></img>
+          <img src={cardData.dot}></img>
         </div>
       </div>
 
-      <div>{item.title}</div>
+      <div>{cardData.title}</div>
       <br />
-      <div className="smallfont">{item.description}</div>
+      <div className="smallfont">{cardData.description}</div>
 
       <br />
 
-      <BubbleImg item={item} />
+      {/* <BubbleImg item={item} /> */}
     </div>
   );
 }

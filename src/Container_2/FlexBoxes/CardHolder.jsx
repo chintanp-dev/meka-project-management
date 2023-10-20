@@ -1,10 +1,10 @@
 import { React } from "react";
 import Card from "./Card";
 
-function CardHolder() {
+function CardHolder({ cardHolderData }) {
   return (
     <div className="main">
-      {/* <div className="flexboxes">
+      <div className="flexboxes">
         <header className="header3">
           <div>{cardHolderData.title}</div>
           <div className="align_center">
@@ -13,14 +13,17 @@ function CardHolder() {
           </div>
         </header>
 
-        <Card>
-          {props.cards.map((Card) => (
-            <Card key={cardData.id} cardData={cardData} />
-          ))}
-        </Card>
-      </div> */}
+        {cardHolderData.cardId.map((cardData) => {
+          console.log("f",cardData);
+          return (
+          <div>
+          <Card key={cardData.id} cardData={cardData} />
+          </div>
+        )})}
+      </div>
     </div>
   );
 }
+
 
 export default CardHolder;
