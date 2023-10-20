@@ -1,7 +1,7 @@
 .container1 {
   flex-direction: column;
   width: 15%;
-  height: 109%;
+  height: 100%;
   background-color: rgb(247, 247, 247);
   /* background-color: (255, 255, 255, 1); */
 }
@@ -27,7 +27,7 @@
 }
 .item13 {
   background-color: rgb(188, 248, 248);
-  width: 166px;
+  width: 100%;
 }
 .item16 {
   position: absolute;
