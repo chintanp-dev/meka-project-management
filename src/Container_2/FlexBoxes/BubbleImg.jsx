@@ -1,4 +1,4 @@
-function BubbleImg ({item}) {
+function BubbleImg (item) {
     return (
         <>
         <div className="mainboximg" >

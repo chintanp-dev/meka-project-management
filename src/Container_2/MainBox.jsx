@@ -1,28 +1,39 @@
 import React from "react";
+import { DragDropContext } from "react-beautiful-dnd";
 import initialData from "./InitialData";
 import CardHolder from "./FlexBoxes/CardHolder";
 
 function MainBox() {
-  return initialData.cardHolderDataOrder.map((cardHolderId) => {
-    const cardHolderData = initialData.cardHolderData[cardHolderId];
 
-    const cardId = cardHolderData.cardId.map(
-      (cardId, index) => initialData.cardHolderData[cardHolderId].cardId[index]
-    );
+    const onDragEnd = result => {
+        console.log( result);
+    }
 
-    // cardId === cardHolderData.cardId
+  return (
+    <DragDropContext onDragEnd={onDragEnd}>
+      {initialData.cardHolderDataOrder.map((cardHolderId) => {
+        const cardHolderData = initialData.cardHolderData[cardHolderId];
 
-    // [1, 2, 3].map(el => el)
-    // returning same array
+        const cardData = cardHolderData.cardId.map(
+          (cardData, index) =>
+            initialData.cardHolderData[cardHolderId].cardId[index]
+        );
 
-    return (
-      <CardHolder
-        key={cardHolderData.id}
-        cardHolderData={cardHolderData}
-        cardId={cardId}
-      />
-    );
-  });
+        return (
+          <CardHolder
+            key={cardHolderData.id}
+            cardHolderData={cardHolderData}
+            cardData={cardData}
+          />
+        );
+      })}
+    </DragDropContext>
+  );
 }
 
 export default MainBox;
+
+// cardId === cardHolderData.cardId
+
+// [1, 2, 3].map(el => el)
+// returning same array

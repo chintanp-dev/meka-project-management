@@ -12,7 +12,7 @@ const initialData = {
       dot: Dots,
       bubble: ["VH", "AG"],
     },
-    a2: {
+    "a2": {
       id: "a2",
       category: "🔵 TYPOGRAPHY",
       title: "Typography change",
@@ -21,7 +21,7 @@ const initialData = {
       dot: Dots,
       bubble: ["ML"],
     },
-    b1: {
+    "b1": {
       id: "b1",
       category: "🔴 DEVELOPMENT",
       title: "Implement Design Screens",
@@ -30,7 +30,7 @@ const initialData = {
       dot: Dots,
       bubble: ["VH", "LK"],
     },
-    c1: {
+    "c1": {
       id: "c1",
       category: "🔴 DEVELOPMENT",
       title: "Fix bugs in the CSS code",
@@ -39,7 +39,7 @@ const initialData = {
       dot: Dots,
       bubble: ["HU", "NL"],
     },
-    c2: {
+    "c2": {
       id: "c2",
       category: "🔵 TYPOGRAPHY",
       title: "Proofread final text",
@@ -48,7 +48,7 @@ const initialData = {
       dot: Dots,
       bubble: ["AG"],
     },
-    c3: {
+    "c3": {
       id: "c3",
       category: "🟢 DESIGN SYSTEM",
       title: "Responsive Design",
