@@ -1,33 +1,40 @@
 import { React } from "react";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 import Card from "./Card";
-import { Droppable } from "react-beautiful-dnd";
 
-function CardHolder({ cardHolderData, cardData }) {
-  console.log(cardHolderData.id);
+function CardHolder(props) {
   return (
-    <div className="main">
-      <div className="flexboxes">
-        <header className="header3">
-          <div>{cardHolderData.title}</div>
-          <div className="align_center">
-            <img src={cardHolderData.plus}></img>
-            <img src={cardHolderData.dot}></img>
-          </div>
-        </header>
-        <Droppable droppableId={cardHolderData.id}>
-          {(provided) => (
-            <div innerRef={provided.innerRef} {...provided.droppableProps}>
-            
-              {cardData.map((cardData, index) => {
-                return <Card key={cardData.id} cardData={cardData} index={index} />;
-              })}
-
-              {provided.placeholder}
+    <Draggable draggableId={props.cardHolderData.id} index={props.index}>
+      {(provided) => (
+        <div
+          className="flexboxes"
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
+          <header className="header3">
+            <div>{props.cardHolderData.title}</div>
+            <div className="align_center">
+              <img src={props.cardHolderData.plus}></img>
+              <img src={props.cardHolderData.dot}></img>
             </div>
-          )}
-        </Droppable>
-      </div>
-    </div>
+          </header>
+          <Droppable droppableId={props.cardHolderData.id} type="cardData">
+            {(provided) => (
+              <div ref={provided.innerRef} {...provided.droppableProps}>
+                {props.cardData.map((cardData, index) => {
+                  return (
+                    <Card key={cardData.id} cardData={cardData} index={index} />
+                  );
+                })}
+
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </div>
+      )}
+    </Draggable>
   );
 }
 

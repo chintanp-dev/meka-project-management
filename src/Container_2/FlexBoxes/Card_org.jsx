@@ -2,7 +2,7 @@
 // import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 // import BubbleImg from "./BubbleImg";
 
-// function Card({ props }) {
+// function Card( props ) {
 //   const [card, setCard] = useState(props.infoCard);
 
 //   function handleOnDragEndCard(result) {

@@ -1,9 +1,8 @@
-function BubbleImg (item) {
+function BubbleImg (props) {
     return (
         <>
         <div className="mainboximg" >
-        
-              {item.bubble.map((bubble) => {
+              {props.bubble.map((bubble) => {
                 let red = Math.floor(Math.random() * 255);
                 let green = Math.floor(Math.random() * 255);
                 let blue = Math.floor(Math.random() * 255);
@@ -26,4 +25,4 @@ function BubbleImg (item) {
     )
 }
 
-export default BubbleImg
+export default BubbleImg;

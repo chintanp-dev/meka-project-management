@@ -1,19 +1,15 @@
 import { React } from "react";
 import { Draggable } from "react-beautiful-dnd";
-
 import BubbleImg from "./BubbleImg";
 
 function Card(props) {
-    
-//   console.log(Object.entries(props.cardData));
-
   return (
     <Draggable draggableId={props.cardData.id} index={props.index}>
       {(provided) => (
-        <div 
-        {...provided.draggableProps}
-        {...provided.dragHandleProps}
-        innerRef={provided.innerRef} 
+        <div
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
         >
           <div className="card">
             <div className="header31">
@@ -29,7 +25,7 @@ function Card(props) {
 
             <br />
 
-            {/* <BubbleImg item={item} /> */}
+            {/* <BubbleImg item={props.cardData.bubble} /> */}
           </div>
         </div>
       )}
