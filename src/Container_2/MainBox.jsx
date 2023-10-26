@@ -4,6 +4,7 @@ import initialData from "./InitialData";
 import CardHolder from "./FlexBoxes/CardHolder";
 
 function MainBox() {
+    
   const [state, setState] = useState(initialData);
 
   const onDragEnd = (result) => {
@@ -33,54 +34,66 @@ function MainBox() {
       return;
     }
 
-    const start = state.cardHolderData[source.droppableId];
-    const finish = state.cardHolderData[destination.droppableId];
+    // const start = state.cardHolderData[source.droppableId];
+    // const finish = state.cardHolderData[destination.droppableId];
 
-    if (start === finish) {
-      const newCardId = Array.from(draggableId);
-      newCardId.splice(source.index, 1);
-      newCardId.splice(destination.index, 0, draggableId);
-      const newCardHolderData = {
-        ...start,
-        cardId: newCardId,
-      };
-      const newState = {
-        ...state,
-        cardHolderData: {
-          ...state.cardHolderData,
-          [newCardHolderData.id]: newCardHolderData,
-        },
-      };
-      setState(newState);
-      return;
-    }
+    // if (start === finish) {
+    //   const newCardId = Array.from(draggableId);
+    //   newCardId.splice(source.index, 1);
+    //   newCardId.splice(destination.index, 0, draggableId);
+    //   const newCardHolderData = {
+    //     ...start,
+    //     cardId: newCardId,
+    //   };
+    //   const newState = {
+    //     ...state,
+    //     cardHolderData: {
+    //       ...state.cardHolderData,
+    //       [newCardHolderData.id]: newCardHolderData,
+    //     },
+    //   };
+    //   setState(newState);
+    //   return;
+    // }
+
+
 
     // Moving from one cardHolder to another
-    const startCardId = start.cardId;
-    startCardId.splice(source.index, 1);
 
-    const newStart = {
-      ...start,
-      cardId: startCardId,
-    };
+    // const startCardId = start.cardId;
+    // startCardId.splice(source.index, 1);
 
-    const finishCardId = finish.cardId;
-    finishCardId.splice(destination.index, 0, draggableId);
+    // const newStart = {
+    //   ...start,
+    //   cardId: startCardId,
+    // };
 
-    const newFinish = {
-      ...finish,
-      cardId: finishCardId,
-    };
+    // const finishCardId = finish.cardId;
+    // finishCardId.splice(destination.index, 0, draggableId);
 
-    const newState = {
-      ...state,
-      cardHolderData: {
-        ...state.cardHolderData,
-        [newStart.id]: newStart,
-        [newFinish.id]: newFinish,
-      },
-    };
-    newState;
+    // const newFinish = {
+    //   ...finish,
+    //   cardId: finishCardId,
+    // };
+
+    // const newState = {
+    //   ...state,
+    //   cardHolderData: {
+    //     ...state.cardHolderData,
+    //     [newStart.id]: newStart,
+    //     [newFinish.id]: newFinish,
+    //   },
+    // };
+    // newState;
+
+
+    setState((state) => {
+    const [reorderedItem] = state.splice(result.source.index, 1);
+    state.splice(result.destination.index, 0, reorderedItem);
+    state = structuredClone(state);
+    return state;
+  });
+
   };
 
   return (
