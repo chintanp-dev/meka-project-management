@@ -61,27 +61,28 @@ const initialData = {
 
   cardHolderData: {
     "cardHolderData-1": {
-      id: "a",
+      id: "cardHolderData-1",
       title: "To Do",
       plus: Plus,
       dot: Dots,
       cardId: ['a1','a2'],
     },
     "cardHolderData-2": {
-      id: "b",
+      id: "cardHolderData-2",
       title: "In Progress",
       plus: Plus,
       dot: Dots,
       cardId: ['b1'],
     },
     "cardHolderData-3": {
-      id: "c",
+      id: "cardHolderData-3",
       title: "Done",
       plus: Plus,
       dot: Dots,
       cardId: ['c1', 'c2', 'c3'],
     },
   },
+
   cardHolderDataOrder: ['cardHolderData-1', 'cardHolderData-2', 'cardHolderData-3'],
 };
 

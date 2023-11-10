@@ -19,7 +19,7 @@ function CardHolder(props) {
               <img src={props.cardHolderData.dot}></img>
             </div>
           </header>
-          <Droppable droppableId={props.cardHolderData.id} type="task">
+          <Droppable droppableId={props.cardHolderData.id} type="cardData">
             {(provided) => (
               <div ref={provided.innerRef} {...provided.droppableProps}>
                 {props.cardData.map((cardData, index) => {
